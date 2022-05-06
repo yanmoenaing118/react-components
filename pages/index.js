@@ -3,28 +3,63 @@ import { ICON_RIGH_ARROW } from "../icons";
 
 export default function Home() {
   return (
-    
-    <div>
+    <main>
+      <section>
+        <h1>Home page Components</h1>
+        <div className="components">
+          <div>
+            <Button text="Shop Now" fill={false} />
+          </div>
+          <div>
+            <Button text="sign up free" icon={ICON_RIGH_ARROW} />
+          </div>
+        </div>
+      </section>
 
-      <Button text="Add to card" fill={false} onClick={() => console.log('clicked')}/>
-      <Button text="Click here to get" fill={false} icon={ICON_RIGH_ARROW} />
+      <section>
+        <h1>Login, Register, forgot password</h1>
+        <div className="components">
+          <div>
+            <Button type="submit" text="login" full size="lg" disabled/>
+          </div>
+          <div>
+            <Button type="submit" text="sign up" full size="lg"/>
+          </div>
+          <div>
+            <Button type="submit" text="forgot password" full size="lg"/>
+          </div>
+        </div>
+      </section>
 
-      <div className="box">
-        <h1>This is header</h1>
-        <Button text="Login to get access!" full />
-      </div>
-
+      <section>
+        <h1>Product Detail Page Components</h1>
+        <div className="components">
+          <div>
+            <Button text="add to card" fill />
+          </div>
+          <div>
+           
+          </div>
+        </div>
+      </section>
       <style jsx>{`
-        div {
+        main {
           margin: 30px;
         }
+        section {
+          padding: 2rem;
+          margin-bottom: 2rem;
+          border-bottom: 1px solid lightgray;
+        }
 
+        .components > div {
+          margin: 10px;
+        }
         .box {
           border: 1px solid gray;
           max-width: 380px;
         }
       `}</style>
-    </div>
-    
-  )
+    </main>
+  );
 }
