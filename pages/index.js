@@ -4,6 +4,7 @@ import TextInput from "../components/form/TextInput";
 import EmailInput from "../components/form/EmailInput";
 import { ICON_RIGH_ARROW } from "../icons";
 import { useForm } from "react-hook-form";
+import PasswordInput from "../components/form/PasswordInput";
 
 export default function Home() {
   const {
@@ -78,6 +79,13 @@ export default function Home() {
               name="email"
               label="Email"
               errorMessage={errors.email && "Invalid email"}
+            />
+
+            <PasswordInput
+              name="password"
+              label="Password"
+              register={register}
+              errorMessage={errors.password && "Password is required"}
             />
             <Button text="Submit" type="submit" />
           </Form>

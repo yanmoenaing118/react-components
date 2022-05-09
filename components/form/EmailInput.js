@@ -1,4 +1,5 @@
 export default function EmailInput({
+  defaultValue,
   label,
   name,
   validateOptions = {
@@ -11,7 +12,11 @@ export default function EmailInput({
   return (
     <div>
       <label>{label}</label>
-      <input type="text" {...register(name, { ...validateOptions })} />
+      <input
+        type="text"
+        defaultValue={defaultValue}
+        {...register(name, { ...validateOptions })}
+      />
       {errorMessage && <span>{errorMessage}</span>}
 
       <style jsx>{`

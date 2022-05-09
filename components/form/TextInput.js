@@ -9,7 +9,11 @@ export default function TextInput({
   return (
     <div>
       <label>{label}</label>
-      <input type="text" defaultValue={defaultValue} {...register(name, { ...validateOptions })} />
+      <input
+        type="text"
+        defaultValue={defaultValue}
+        {...register(name, { ...validateOptions })}
+      />
       {errorMessage && <span>{errorMessage}</span>}
 
       <style jsx>{`
